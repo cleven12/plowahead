@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Registration Successful - Plow Ahead Initiative{% endblock %}
+
+{% block content %}
+<section class="success-section">
+    <div class="success-gradient">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="success-card text-center">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle fa-5x text-success mb-4"></i>
+                        </div>
+                        
+                        <h1 class="mb-4">Welcome to Plow Ahead Initiative!</h1>
+                        
+                        <p class="lead mb-4">
+                            Thank you, <strong>{{ member.name }}</strong>! Your registration has been successfully completed.
+                        </p>
+                        
+                        <div class="success-details">
+                            <p>
+                                A confirmation email has been sent to <strong>{{ member.email }}</strong> with all the details.
+                            </p>
+                            
+                            <p>
+                                We're excited to have you as part of our community dedicated to unlocking human potential through education, innovation, and purposeful development.
+                            </p>
+                        </div>
+                        
+                        <div class="success-actions">
+                            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-home me-2"></i>
+                                Back to Home
+                            </a>
+                            
+                            <a href="https://instagram.com/plowaheadinitiative" target="_blank" class="btn btn-instagram btn-lg">
+                                <i class="fab fa-instagram me-2"></i>
+                                Follow Us
+                            </a>
+                        </div>
+                        
+                        <div class="next-steps mt-5">
+                            <h5>What's Next?</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-envelope text-primary me-2"></i> Check your email for welcome information</li>
+                                <li><i class="fab fa-instagram text-primary me-2"></i> Follow us on Instagram for updates</li>
+                                <li><i class="fas fa-users text-primary me-2"></i> Connect with our community of changemakers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

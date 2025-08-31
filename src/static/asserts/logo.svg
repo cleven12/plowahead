@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Gradient for the arrow -->
+    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  
+  <!-- Background circle (for when used on colored backgrounds) -->
+  <circle cx="100" cy="100" r="95" fill="#214487" stroke="#3a5da8" stroke-width="3"/>
+  
+  <!-- Inner white circle -->
+  <circle cx="100" cy="100" r="85" fill="#ffffff"/>
+  
+  <!-- Plow/farming lines (abstract representation) -->
+  <g stroke="#214487" stroke-width="3" fill="none" opacity="0.3">
+    <path d="M 30 70 Q 50 60 70 70"/>
+    <path d="M 35 80 Q 55 70 75 80"/>
+    <path d="M 40 90 Q 60 80 80 90"/>
+  </g>
+  
+  <!-- Main arrow shaft -->
+  <rect x="45" y="92" width="85" height="16" fill="url(#arrowGradient)" filter="url(#shadow)" rx="8"/>
+  
+  <!-- Arrow head -->
+  <polygon points="130,100 160,75 160,87 145,100 160,113 160,125" 
+           fill="url(#arrowGradient)" 
+           filter="url(#shadow)"/>
+  
+  <!-- Progress/forward motion lines -->
+  <g stroke="#214487" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M 120 60 L 135 60"/>
+    <path d="M 125 65 L 140 65"/>
+    <path d="M 125 135 L 140 135"/>
+    <path d="M 120 140 L 135 140"/>
+  </g>
+  
+  <!-- Small decorative elements suggesting growth/potential -->
+  <g fill="#3a5da8" opacity="0.7">
+    <circle cx="75" cy="130" r="3"/>
+    <circle cx="85" cy="125" r="2"/>
+    <circle cx="65" cy="135" r="2"/>
+  </g>
+  
+  <!-- Forward momentum accent -->
+  <path d="M 140 100 L 150 95 L 150 105 Z" fill="#214487" opacity="0.8"/>
+</svg>

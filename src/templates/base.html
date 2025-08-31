@@ -37,7 +37,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    
+    <script>
+     document.addEventListener('keydown', function(e) {
+          if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's')) {
+            e.preventDefault();
+          }
+        });
+     </script>
     {% block scripts %}{% endblock %}
 </body>
 </html>

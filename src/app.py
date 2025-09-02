@@ -82,9 +82,10 @@ class Member(db.Model):
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'cleven2024@gmail.com'
-app.config['MAIL_PASSWORD'] = 'fcyk lfvk ujkc uihc'
-app.config['MAIL_DEFAULT_SENDER'] = ('Plow Ahead', 'happykombet@gmail.com')
+
+app.config['MAIL_USERNAME'] = 'XXXXXXXX'
+app.config['MAIL_PASSWORD'] = 'XXXXXXX'
+app.config['MAIL_DEFAULT_SENDER'] = 'XXXXXXXXXX'
 
 # Initialize extensions
 db.init_app(app)

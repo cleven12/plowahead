@@ -37,8 +37,7 @@ db = SQLAlchemy(model_class=Base)
 mail = Mail()
 
 # Create the app
-app = Flask(__name__)
-app.secret_key = os.environ.get("SESSION_SECRET", "cGxvd19haGVhZF8yMDI1X2hha3VuYV9tYXRhdGEK")
+app =")
 app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 
 # Configure the database
@@ -59,24 +58,6 @@ class Member(db.Model):
 
     def __repr__(self):
         return f'<Member {self.name}>'
-
-# v[0]
-# Configure Flask-Mail
-# app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-# app.config['MAIL_PORT'] = 587
-# app.config['MAIL_USE_TLS'] = True
-# app.config['MAIL_USERNAME'] = 'clevengodsontech@gmail.com'
-# app.config['MAIL_PASSWORD'] = 'ipx ihef eocq bceb'
-# app.config['MAIL_DEFAULT_SENDER'] = 'clevengodsontech@gmail.com'
-
-# v[1]
-# app.config['MAIL_SERVER'] = 'smtp.gmail.com'       # Or your email provider
-# app.config['MAIL_PORT'] = 587                     # 465 for SSL
-# app.config['MAIL_USE_TLS'] = True                 # True if using TLS
-# app.config['MAIL_USE_SSL'] = False                # True if using SSL
-# app.config['MAIL_USERNAME'] = 'your_email@gmail.com'
-# app.config['MAIL_PASSWORD'] = 'your_email_password'
-# app.config['MAIL_DEFAULT_SENDER'] = ('Plow Ahead', 'your_email@gmail.com')
 
 # v[2]
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
